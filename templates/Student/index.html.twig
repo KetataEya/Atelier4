@@ -1,0 +1,16 @@
+<table border=*1*>
+<tr>
+<th>NSC</th>
+<th>Email</th>
+</tr>
+{ % for s in student % }
+<tr>
+<td>{{s.id}}</td>
+<td>{{s.NSC}}</td>
+<td>{{s.Email}}</td>
+<td><a href="{{path('student_delete',{'id':s.id})}}">Delete</a></td>
+<td><a href="{{path('student_update',{'id':s.id})}}">Update</a></td>
+
+</tr>
+{%endfor%}
+</table>
